@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { db } from '../../firebase';
+import About from '../About/About';
 
 export default function App() {
 
@@ -14,7 +15,7 @@ export default function App() {
 
   return (
     <>
-      <p>operational</p>
+      <About />
     </>
   );
 }
