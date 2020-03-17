@@ -7,8 +7,10 @@ export default function Books() {
       <h1>Books</h1>
       <table>
         <thead>
-          <th>Title</th>
-          <th>Author</th>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+          </tr>
         </thead>
         <tbody>
           <tr>

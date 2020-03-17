@@ -7,8 +7,10 @@ export default function Movies() {
       <h1>Movies</h1>
       <table>
         <thead>
-          <th>Title</th>
-          <th>Genre</th>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
