@@ -5,7 +5,7 @@ import About from '../About/About';
 import Home from '../Home/Home';
 import Books from '../Books/Books';
 import Movies from '../Movies/Movies';
-// import Podcasts from '../Podcasts/Podcasts';
+import Podcasts from '../Podcasts/Podcasts';
 
 export default function App() {
 
@@ -17,7 +17,7 @@ export default function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/books" component={Books} />
           <Route exact path="/movies" component={Movies} />
-          {/* <Route exact path="/podcasts" component={Podcasts} /> */}
+          <Route exact path="/podcasts" component={Podcasts} />
           <Redirect from="/*" to="/" />
         </Switch>
       </Router>
