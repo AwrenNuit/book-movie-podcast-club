@@ -6,12 +6,14 @@ import Home from '../Home/Home';
 import Books from '../Books/Books';
 import Movies from '../Movies/Movies';
 import Podcasts from '../Podcasts/Podcasts';
+import Nav from '../Nav/Nav';
 
 export default function App() {
 
   return (
     <>
       <Router>
+        <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
