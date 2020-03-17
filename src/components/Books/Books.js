@@ -23,6 +23,8 @@ export default function Books() {
       });
       clearReducer();
       resetList();
+      setNewTitle('');
+      setNewAuthor('');
     }
   }
 

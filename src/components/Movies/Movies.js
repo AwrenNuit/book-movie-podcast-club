@@ -22,6 +22,8 @@ export default function Movies() {
       });
       clearReducer();
       resetList();
+      setNewTitle('');
+      setNewGenre('');
     }
   }
 
