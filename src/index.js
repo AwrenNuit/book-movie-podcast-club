@@ -6,9 +6,12 @@ import App from './components/App/App';
 
 const bookListReducer = (state=[], action) => action.type === `SET_BOOK_LIST` ? [...state, action.payload] : state;
 
+const movieListReducer = (state=[], action) => action.type === `SET_MOVIE_LIST` ? [...state, action.payload] : state;
+
 const store = createStore(
   combineReducers({
-  bookListReducer
+  bookListReducer,
+  movieListReducer
   })
 );
 
