@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { db } from '../../firebase';
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Books() {
 
-  const bookList = useSelector(state => state.books);
+  const dispatch = useDispatch();
+  const bookList = useSelector(state => state.bookListReducer);
 
   useEffect(()=>{
     db.ref(`/books`).on(`value`, snap => {
@@ -25,13 +27,12 @@ export default function Books() {
           </tr>
         </thead>
         <tbody>
-          {/* {bookList && bookList.map((book, i)=>
+          {bookList.map((book, i)=>
             <tr key={i}>
               <td>{book.title}</td>
               <td>{book.author}</td>
             </tr>
-          )} */}
-          {bookList.title}
+          )}
         </tbody>
       </table>
     </>
