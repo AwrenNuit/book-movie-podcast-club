@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { db } from '../firebase';
+import { db } from '../../firebase';
 
 export default function App() {
 
