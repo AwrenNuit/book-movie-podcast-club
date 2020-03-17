@@ -25,7 +25,7 @@ export default function Movies() {
     <>
       <h1>Movies</h1>
       <div>
-        <p>Add Book</p>
+        <p>Add Movie</p>
         <form onSubmit={addNewMovie}>
           <input 
             type="text" 
