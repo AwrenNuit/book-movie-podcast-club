@@ -26,10 +26,22 @@ const movieListReducer = (state=[], action) => {
   }
 }
 
+const podcastListReducer = (state=[], action) => {
+  switch(action.type){
+    case `SET_PODCAST_LIST`:
+      return [...state, action.payload];
+    case `CLEAR_PODCAST_LIST`:
+      return [];
+    default:
+      return state;
+  }
+}
+
 const store = createStore(
   combineReducers({
   bookListReducer,
-  movieListReducer
+  movieListReducer,
+  podcastListReducer
   })
 );
 
