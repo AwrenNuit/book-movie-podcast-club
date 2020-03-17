@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { db } from '../../firebase';
 import { useSelector, useDispatch } from 'react-redux';
+import './Books.css';
 
 export default function Books() {
 
@@ -18,12 +19,11 @@ export default function Books() {
   return(
     <>
       <h1>Books</h1>
-      {JSON.stringify(bookList)}
-      <table>
+      <table className="book-table">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Author</th>
+            <th className="book-table-heading">Title</th>
+            <th className="book-table-heading">Author</th>
           </tr>
         </thead>
         <tbody>
