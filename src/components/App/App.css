@@ -11,3 +11,15 @@ th, td {
 th {
   font-weight: bold;
 }
+
+.add-new-item-container {
+  padding: 0 0 20px 10px;
+}
+
+.add-new-item-form {
+  display: inline;
+}
+
+.add-new-item-input {
+  margin: 10px;
+}

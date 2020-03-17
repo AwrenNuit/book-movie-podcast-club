@@ -40,16 +40,18 @@ export default function Movies() {
   return(
     <>
       <h1>Movies</h1>
-      <div>
-        <p>Add Movie</p>
-        <form onSubmit={addNewMovie}>
+      <div className="add-new-item-container">
+        <span>Add Movie: </span>
+        <form className="add-new-item-form" onSubmit={addNewMovie}>
           <input 
+            className="add-new-item-input"
             type="text" 
             value={newTitle} 
             onChange={(e)=>setNewTitle(e.target.value)} 
             placeholder="movie title" 
           />
           <input 
+            className="add-new-item-input"
             type="text" 
             value={newGenre} 
             onChange={(e)=>setNewGenre(e.target.value)} 

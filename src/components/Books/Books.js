@@ -41,16 +41,18 @@ export default function Books() {
   return(
     <>
       <h1>Books</h1>
-      <div>
-        <p>Add Book</p>
-        <form onSubmit={addNewBook}>
+      <div className="add-new-item-container">
+        <span>Add Book: </span>
+        <form className="add-new-item-form" onSubmit={addNewBook}>
           <input 
+            className="add-new-item-input"
             type="text" 
             value={newTitle} 
             onChange={(e)=>setNewTitle(e.target.value)} 
             placeholder="book title" 
           />
           <input 
+            className="add-new-item-input"
             type="text" 
             value={newAuthor} 
             onChange={(e)=>setNewAuthor(e.target.value)} 
