@@ -13,10 +13,10 @@ export default function Movies() {
     resetList();
   }, []);
 
-  async function addNewMovie(e){
+  const addNewMovie = e => {
     e.preventDefault();
     if(newTitle !== ''){
-      await db.ref(`/movies/${newTitle}`).set({
+      db.ref(`/movies/${newTitle}`).set({
         title: newTitle,
         genre: newGenre
       });
