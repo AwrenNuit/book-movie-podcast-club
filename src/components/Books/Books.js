@@ -18,8 +18,14 @@ export default function Books() {
     });
   }, []);
 
-  const addNewBook = () => {
-
+  const addNewBook = e => {
+    e.preventDefault();
+    if(newTitle !== ''){
+      db.ref(`/books/${newTitle}`).set({
+        title: newTitle,
+        author: newAuthor
+      });
+    }
   }
 
   return(

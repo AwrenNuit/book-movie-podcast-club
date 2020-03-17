@@ -17,8 +17,14 @@ export default function Movies() {
     });
   }, []);
 
-  const addNewMovie = () => {
-
+  const addNewMovie = e => {
+    e.preventDefault();
+    if(newTitle !== ''){
+      db.ref(`/movies/${newTitle}`).set({
+        title: newTitle,
+        genre: newGenre
+      });
+    }
   }
 
   return(
