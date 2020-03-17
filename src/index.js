@@ -4,9 +4,27 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App/App';
 
-const bookListReducer = (state=[], action) => action.type === `SET_BOOK_LIST` ? [...state, action.payload] : state;
+const bookListReducer = (state=[], action) => {
+  switch(action.type){
+    case `SET_BOOK_LIST`:
+      return [...state, action.payload];
+    case `CLEAR`:
+      return [];
+    default:
+      return state;
+  }
+}
 
-const movieListReducer = (state=[], action) => action.type === `SET_MOVIE_LIST` ? [...state, action.payload] : state;
+const movieListReducer = (state=[], action) => {
+  switch(action.type){
+    case `SET_MOVIE_LIST`:
+      return [...state, action.payload];
+    case `CLEAR_MOVIE_LIST`:
+      return [];
+    default:
+      return state;
+  }
+}
 
 const store = createStore(
   combineReducers({

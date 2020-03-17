@@ -10,21 +10,29 @@ export default function Movies() {
   const [newGenre, setNewGenre] = useState('');
 
   useEffect(()=>{
+    resetList();
+  }, []);
+
+  async function addNewMovie(e){
+    e.preventDefault();
+    if(newTitle !== ''){
+      await db.ref(`/movies/${newTitle}`).set({
+        title: newTitle,
+        genre: newGenre
+      });
+      clearReducer();
+      resetList();
+    }
+  }
+
+  const clearReducer = () => dispatch({type: `CLEAR_MOVIE_LIST`});
+
+  const resetList = () => {
     db.ref(`/movies`).on(`value`, snap => {
       snap.forEach(child => {
         dispatch({type: `SET_MOVIE_LIST`, payload: child.val()});
       });
     });
-  }, []);
-
-  const addNewMovie = e => {
-    e.preventDefault();
-    if(newTitle !== ''){
-      db.ref(`/movies/${newTitle}`).set({
-        title: newTitle,
-        genre: newGenre
-      });
-    }
   }
 
   return(
