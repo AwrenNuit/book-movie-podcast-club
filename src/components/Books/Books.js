@@ -11,11 +11,7 @@ export default function Books() {
   const [newAuthor, setNewAuthor] = useState('');
 
   useEffect(()=>{
-    db.ref(`/books`).on(`value`, snap => {
-      snap.forEach(child => {
-        dispatch({type: `SET_BOOK_LIST`, payload: child.val()});
-      });
-    });
+    resetList();
   }, []);
 
   const addNewBook = e => {
@@ -25,7 +21,19 @@ export default function Books() {
         title: newTitle,
         author: newAuthor
       });
+      clearReducer();
+      resetList();
     }
+  }
+
+  const clearReducer = () => dispatch({type: `CLEAR_BOOK_LIST`});
+
+  const resetList = () => {
+    db.ref(`/books`).on(`value`, snap => {
+      snap.forEach(child => {
+        dispatch({type: `SET_BOOK_LIST`, payload: child.val()});
+      });
+    });
   }
 
   return(

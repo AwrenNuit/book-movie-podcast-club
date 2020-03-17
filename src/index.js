@@ -8,7 +8,7 @@ const bookListReducer = (state=[], action) => {
   switch(action.type){
     case `SET_BOOK_LIST`:
       return [...state, action.payload];
-    case `CLEAR`:
+    case `CLEAR_BOOK_LIST`:
       return [];
     default:
       return state;
