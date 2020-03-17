@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import About from '../About/About';
 import Home from '../Home/Home';
@@ -12,12 +12,14 @@ export default function App() {
   return (
     <>
       <Router>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/books" component={Books} />
-        <Route exact path="/movies" component={Movies} />
-        {/* <Route exact path="/podcasts" component={Podcasts} /> */}
-        <Redirect path="/*" render={()=><Redirect to="/" />} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/books" component={Books} />
+          <Route exact path="/movies" component={Movies} />
+          {/* <Route exact path="/podcasts" component={Podcasts} /> */}
+          <Redirect from="/*" to="/" />
+        </Switch>
       </Router>
     </>
   );
