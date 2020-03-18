@@ -1,4 +1,8 @@
 nav ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: black;
   list-style: none;
 }
@@ -24,4 +28,8 @@ nav ul li:hover {
 
 .nav-name:hover {
   background-color: black;
+}
+
+.whitespace-bottom {
+  height: 50px;
 }
