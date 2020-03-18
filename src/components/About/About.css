@@ -33,7 +33,7 @@
   }
 }
 
-@moz-keyframes bg-gradient {
+@-moz-keyframes bg-gradient {
   0%{
     background-position: 0% 50%
   }
@@ -45,7 +45,7 @@
   }
 }
 
-@webkit-keyframes bg-gradient {
+@-webkit-keyframes bg-gradient {
   0%{
     background-position: 0% 50%
   }
