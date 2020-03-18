@@ -40,7 +40,7 @@ export default function Books() {
   }
 
   return(
-    <>
+    <div className="main-container">
       <h1>Books</h1>
       <div className="add-new-item-container">
         <span>Add Book: </span>
@@ -78,6 +78,6 @@ export default function Books() {
           )}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }

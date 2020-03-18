@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../firebase';
 import { useSelector, useDispatch } from 'react-redux';
+import { db } from '../../firebase';
+import './Podcasts.css';
 
 export default function Podcasts() {
 
@@ -39,7 +40,7 @@ export default function Podcasts() {
   }
 
   return(
-    <>
+    <div className="main-container">
       <h1>Podcasts</h1>
       <div className="add-new-item-container">
         <span>Add Podcast: </span>
@@ -61,7 +62,7 @@ export default function Podcasts() {
           <button type="submit">Add to list!</button>
         </form>
       </div>
-      <table>
+      <table className="podcast-table">
         <thead>
           <tr>
             <th>Title</th>
@@ -77,6 +78,6 @@ export default function Podcasts() {
           )}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }

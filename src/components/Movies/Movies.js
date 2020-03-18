@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { db } from '../../firebase';
+import './Movies.css';
 
 export default function Movies() {
 
@@ -39,7 +40,7 @@ export default function Movies() {
   }
 
   return(
-    <>
+    <div className="main-container">
       <h1>Movies</h1>
       <div className="add-new-item-container">
         <span>Add Movie: </span>
@@ -61,7 +62,7 @@ export default function Movies() {
           <button type="submit">Add to list!</button>
         </form>
       </div>
-      <table>
+      <table className="movie-table">
         <thead>
           <tr>
             <th>Title</th>
@@ -77,6 +78,6 @@ export default function Movies() {
           )}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
