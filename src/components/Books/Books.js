@@ -72,7 +72,7 @@ export default function Books() {
               />
             </div>
             <div>
-            <label>Available for free?</label>
+              <label>Available for free?</label>
               <label>
                 <input 
                   className="add-new-item-input"
@@ -96,7 +96,7 @@ export default function Books() {
               </label>
             </div>
             <div>
-            <label>Link to find this book:</label>
+            <label>Where to find this book online:</label>
               <input 
                 className="add-new-item-input"
                 type="text" 

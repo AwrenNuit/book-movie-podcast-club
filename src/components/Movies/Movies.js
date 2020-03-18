@@ -7,8 +7,10 @@ export default function Movies() {
 
   const dispatch = useDispatch();
   const movieList = useSelector(state => state.movieListReducer);
-  const [newTitle, setNewTitle] = useState('');
+  const [newFree, setNewFree] = useState(false);
   const [newGenre, setNewGenre] = useState('');
+  const [newLocation, setNewLocation] = useState('');
+  const [newTitle, setNewTitle] = useState('');
 
   useEffect(()=>{
     clearReducer();
@@ -19,8 +21,10 @@ export default function Movies() {
     e.preventDefault();
     if(newTitle !== ''){
       db.ref(`/movies/${newTitle}`).set({
-        title: newTitle,
-        genre: newGenre
+        free: newFree,
+        genre: newGenre,
+        location: newLocation,
+        title: newTitle
       });
       clearReducer();
       resetList();
@@ -43,37 +47,83 @@ export default function Movies() {
     <div className="main-container">
       <h1>Movies</h1>
       <div className="add-new-item-container">
-        <span>Add Movie: </span>
-        <form className="add-new-item-form" onSubmit={addNewMovie}>
-          <input 
-            className="add-new-item-input"
-            type="text" 
-            value={newTitle} 
-            onChange={(e)=>setNewTitle(e.target.value)} 
-            placeholder="movie title" 
-          />
-          <input 
-            className="add-new-item-input"
-            type="text" 
-            value={newGenre} 
-            onChange={(e)=>setNewGenre(e.target.value)} 
-            placeholder="movie genre" 
-          />
-          <button type="submit">Add to list!</button>
-        </form>
+        <div className="form-container">
+          <h3>Add Movie: </h3>
+          <form className="add-new-item-form" onSubmit={addNewMovie}>
+            <div>
+              <label>Title:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newTitle} 
+                onChange={(e)=>setNewTitle(e.target.value)} 
+                placeholder="movie title" 
+              />
+            </div>
+            <div>
+              <label>Genre:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newGenre} 
+                onChange={(e)=>setNewGenre(e.target.value)} 
+                placeholder="movie genre" 
+              />
+            </div>
+            <div>
+              <label>Available for free?</label>
+              <label>
+                <input 
+                  className="add-new-item-input"
+                  type="radio" 
+                  name="free"
+                  value="true" 
+                  onChange={(e)=>setNewFree(e.target.value)} 
+                />
+                Yes
+              </label>
+              <label>
+                <input 
+                  className="add-new-item-input"
+                  type="radio" 
+                  name="free"
+                  value="false" 
+                  onChange={(e)=>setNewFree(e.target.value)} 
+                  defaultChecked
+                />
+                No
+              </label>
+            </div>
+            <div>
+            <label>Where to find this movie online:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newLocation} 
+                onChange={(e)=>setNewLocation(e.target.value)} 
+                placeholder="website link" 
+              />
+            </div>
+            <button type="submit">Add to list!</button>
+          </form>
+        </div>
       </div>
       <table className="movie-table">
         <thead>
           <tr>
             <th>Title</th>
             <th>Genre</th>
+            <th>Free?</th>
+            <th>Find it Here</th>
           </tr>
         </thead>
         <tbody>
           {movieList.map((movie, i)=>
             <tr key={i}>
-              <td>{movie.title}</td>
-              <td>{movie.genre}</td>
+              <td>{movie.title || "-"}</td>
+              <td>{movie.genre || "-"}</td>
+              <td>{movie.free || "-"}</td>
+              <td>{movie.location || "-"}</td>
             </tr>
           )}
         </tbody>
