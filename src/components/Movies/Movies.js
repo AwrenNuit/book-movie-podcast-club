@@ -30,6 +30,7 @@ export default function Movies() {
       resetList();
       setNewTitle('');
       setNewGenre('');
+      setNewLocation('');
     }
   }
 

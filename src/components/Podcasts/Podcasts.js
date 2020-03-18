@@ -30,6 +30,7 @@ export default function Podcasts() {
       resetList();
       setNewTitle('');
       setNewDescription('');
+      setNewLocation('');
     }
   }
 

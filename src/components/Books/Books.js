@@ -31,6 +31,7 @@ export default function Books() {
       resetList();
       setNewTitle('');
       setNewAuthor('');
+      setNewLocation('');
     }
   }
 
