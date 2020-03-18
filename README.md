@@ -4,6 +4,8 @@
 
 Since we're all being quarantined for at least a couple weeks I figure we should dive deeper into how technology can build community. Share your favorite books, movies, and podcasts. No need to register an account. Just share your favs and see what others recommend. This is an ongoing project. To suggest features please email me at awren.nuit@gmail.com
 
+View the app here: https://book-and-movie-club.web.app/
+
 ## Technologies Used
 
 - JavaScript
