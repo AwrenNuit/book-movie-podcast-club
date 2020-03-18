@@ -4,7 +4,7 @@ import './Home.css';
 export default function Home() {
 
   return(
-    <div className="home-main-container">
+    <div className="main-container">
       <h1>Hey there!</h1>
       <div className="home-container">
         <p className="home-p">
