@@ -4,6 +4,10 @@
   line-height: 1em;
 }
 
+h1 {
+  padding-top: 40px;
+}
+
 table {
   border-collapse: collapse;
 }
