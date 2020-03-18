@@ -11,9 +11,9 @@
   text-align: center;
   background: linear-gradient(45deg, #c4fcf0, #fceabb);
   background-size: 600% 600%;
-  animation: bg-gradient 10s ease infinite;
-  -moz-animation: bg-gradient 10s ease infinite;
-  -webkit-animation: bg-gradient 10s ease infinite;
+  animation: bg-gradient 30s ease infinite;
+  -moz-animation: bg-gradient 30s ease infinite;
+  -webkit-animation: bg-gradient 30s ease infinite;
 }
 
 .about-p {
