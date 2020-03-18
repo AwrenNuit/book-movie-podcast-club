@@ -1,0 +1,27 @@
+nav ul {
+  background-color: black;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid grey;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  background-color: grey;
+}
+
+.nav-name {
+  font-size: 1.8em;
+  padding-right: 40px;
+}
+
+.nav-name:hover {
+  background-color: black;
+}
