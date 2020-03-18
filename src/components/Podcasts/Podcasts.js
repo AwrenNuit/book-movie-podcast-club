@@ -10,6 +10,7 @@ export default function Podcasts() {
   const [newDescription, setNewDescription] = useState('');
 
   useEffect(()=>{
+    clearReducer();
     resetList();
   }, []);
 

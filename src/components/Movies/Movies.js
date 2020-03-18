@@ -10,6 +10,7 @@ export default function Movies() {
   const [newGenre, setNewGenre] = useState('');
 
   useEffect(()=>{
+    clearReducer();
     resetList();
   }, []);
 

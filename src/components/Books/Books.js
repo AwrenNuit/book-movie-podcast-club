@@ -11,6 +11,7 @@ export default function Books() {
   const [newAuthor, setNewAuthor] = useState('');
 
   useEffect(()=>{
+    clearReducer();
     resetList();
   }, []);
 
