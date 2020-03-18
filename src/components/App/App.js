@@ -7,6 +7,7 @@ import Books from '../Books/Books';
 import Movies from '../Movies/Movies';
 import Podcasts from '../Podcasts/Podcasts';
 import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path="/podcasts" component={Podcasts} />
           <Redirect from="/*" to="/" />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
