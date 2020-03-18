@@ -47,6 +47,11 @@ th {
   animation: bg-gradient 30s ease infinite;
   -moz-animation: bg-gradient 30s ease infinite;
   -webkit-animation: bg-gradient 30s ease infinite;
+  padding-bottom: 80px;
+}
+
+.whitespace-bottom {
+  height: 50px;
 }
 
 @keyframes bg-gradient {
