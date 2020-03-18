@@ -1,0 +1,20 @@
+.about-container {
+  display: inline-block;
+  max-width: 600px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.about-main-container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: #fceabb;
+  background: -webkit-linear-gradient(to left, #c4fcf0, #fceabb);
+  background: linear-gradient(to left, #c4fcf0, #fceabb);
+}
+
+.about-p {
+  margin: 10px;
+  font-size: 1.2em;
+}
