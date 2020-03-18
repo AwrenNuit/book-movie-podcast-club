@@ -9,12 +9,50 @@
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: #fceabb;
-  background: -webkit-linear-gradient(to left, #c4fcf0, #fceabb);
-  background: linear-gradient(to left, #c4fcf0, #fceabb);
+  background: linear-gradient(45deg, #c4fcf0, #fceabb);
+  background-size: 600% 600%;
+  animation: bg-gradient 10s ease infinite;
+  -moz-animation: bg-gradient 10s ease infinite;
+  -webkit-animation: bg-gradient 10s ease infinite;
 }
 
 .about-p {
   margin: 10px;
   font-size: 1.2em;
+}
+
+@keyframes bg-gradient {
+  0%{
+    background-position: 0% 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0% 50%
+  }
+}
+
+@moz-keyframes bg-gradient {
+  0%{
+    background-position: 0% 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0% 50%
+  }
+}
+
+@webkit-keyframes bg-gradient {
+  0%{
+    background-position: 0% 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0% 50%
+  }
 }
