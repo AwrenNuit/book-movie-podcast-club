@@ -7,8 +7,11 @@ export default function Books() {
 
   const dispatch = useDispatch();
   const bookList = useSelector(state => state.bookListReducer);
-  const [newTitle, setNewTitle] = useState('');
   const [newAuthor, setNewAuthor] = useState('');
+  const [newFree, setNewFree] = useState(false);
+  const [newLocation, setNewLocation] = useState('');
+  const [newTitle, setNewTitle] = useState('');
+
 
   useEffect(()=>{
     clearReducer();
@@ -19,8 +22,10 @@ export default function Books() {
     e.preventDefault();
     if(newTitle !== ''){
       db.ref(`/books/${newTitle}`).set({
-        title: newTitle,
-        author: newAuthor
+        author: newAuthor,
+        free: newFree,
+        location: newLocation,
+        title: newTitle
       });
       clearReducer();
       resetList();
@@ -43,37 +48,83 @@ export default function Books() {
     <div className="main-container">
       <h1>Books</h1>
       <div className="add-new-item-container">
-        <span>Add Book: </span>
-        <form className="add-new-item-form" onSubmit={addNewBook}>
-          <input 
-            className="add-new-item-input"
-            type="text" 
-            value={newTitle} 
-            onChange={(e)=>setNewTitle(e.target.value)} 
-            placeholder="book title" 
-          />
-          <input 
-            className="add-new-item-input"
-            type="text" 
-            value={newAuthor} 
-            onChange={(e)=>setNewAuthor(e.target.value)} 
-            placeholder="book author" 
-          />
-          <button type="submit">Add to list!</button>
-        </form>
+      <div className="form-container">
+          <h3>Add Book: </h3>
+          <form className="add-new-item-form" onSubmit={addNewBook}>
+            <div>
+              <label>Title:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newTitle} 
+                onChange={(e)=>setNewTitle(e.target.value)} 
+                placeholder="book title" 
+              />
+            </div>
+            <div>
+            <label>Author:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newAuthor} 
+                onChange={(e)=>setNewAuthor(e.target.value)} 
+                placeholder="book author" 
+              />
+            </div>
+            <div>
+            <label>Available for free?</label>
+              <label>
+                <input 
+                  className="add-new-item-input"
+                  type="radio" 
+                  name="free"
+                  value="true" 
+                  onChange={(e)=>setNewFree(e.target.value)} 
+                />
+                Yes
+              </label>
+              <label>
+                <input 
+                  className="add-new-item-input"
+                  type="radio" 
+                  name="free"
+                  value="false" 
+                  onChange={(e)=>setNewFree(e.target.value)} 
+                  defaultChecked
+                />
+                No
+              </label>
+            </div>
+            <div>
+            <label>Link to find this book:</label>
+              <input 
+                className="add-new-item-input"
+                type="text" 
+                value={newLocation} 
+                onChange={(e)=>setNewLocation(e.target.value)} 
+                placeholder="website link" 
+              />
+            </div>
+            <button type="submit">Add to list!</button>
+          </form>
+        </div>
       </div>
       <table className="book-table">
         <thead>
           <tr>
             <th className="book-table-heading">Title</th>
             <th className="book-table-heading">Author</th>
+            <th className="book-table-heading">Free?</th>
+            <th className="book-table-heading">Find it Here</th>
           </tr>
         </thead>
         <tbody>
           {bookList.map((book, i)=>
             <tr key={i}>
               <td>{book.title}</td>
-              <td>{book.author}</td>
+              <td>{book.author || "-"}</td>
+              <td>{book.free || "-"}</td>
+              <td>{book.location || "-"}</td>
             </tr>
           )}
         </tbody>

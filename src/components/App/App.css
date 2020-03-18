@@ -25,15 +25,17 @@ th {
 }
 
 .add-new-item-container {
-  padding: 0 0 20px 10px;
-}
-
-.add-new-item-form {
-  display: inline;
+  padding: 40px 0;
 }
 
 .add-new-item-input {
   margin: 10px;
+}
+
+.form-container {
+  max-width: 350px;
+  text-align: left;
+  margin: 10px auto;
 }
 
 .main-container {
