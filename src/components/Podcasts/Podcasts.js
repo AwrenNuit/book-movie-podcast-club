@@ -124,7 +124,13 @@ export default function Podcasts() {
               <td>{podcast.title || "-"}</td>
               <td>{podcast.description || "-"}</td>
               <td>{podcast.free || "-"}</td>
-              <td>{podcast.location || "-"}</td>
+              <td>
+                {podcast.location ? 
+                  <a href={podcast.location} target="_blank" rel="noopener noreferrer">{podcast.location}</a> 
+                : 
+                  "-"
+                }
+              </td>
             </tr>
           )}
         </tbody>

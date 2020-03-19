@@ -124,7 +124,13 @@ export default function Movies() {
               <td>{movie.title || "-"}</td>
               <td>{movie.genre || "-"}</td>
               <td>{movie.free || "-"}</td>
-              <td>{movie.location || "-"}</td>
+              <td>
+                {movie.location ? 
+                  <a href={movie.location} target="_blank" rel="noopener noreferrer">{movie.location}</a> 
+                : 
+                  "-"
+                }
+              </td>
             </tr>
           )}
         </tbody>

@@ -125,7 +125,13 @@ export default function Books() {
               <td>{book.title}</td>
               <td>{book.author || "-"}</td>
               <td>{book.free || "-"}</td>
-              <td>{book.location || "-"}</td>
+              <td>
+                {book.location ? 
+                  <a href={book.location} target="_blank" rel="noopener noreferrer">{book.location}</a> 
+                : 
+                  "-"
+                }
+              </td>
             </tr>
           )}
         </tbody>
