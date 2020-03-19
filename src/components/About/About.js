@@ -5,8 +5,8 @@ export default function About() {
 
   return(
     <div className="main-container">
-      <h1>About</h1>
       <div className="about-container">
+        <h1 className="about-heading">About</h1>
         <p className="about-p">
           Hey everyone! I'm Awren. I figure since we're all quarantined for at least a couple weeks we should 
           dive deeper into how technology can build community. What are your favorite books, movies, and 

@@ -5,8 +5,8 @@ export default function Home() {
 
   return(
     <div className="main-container">
-      <h1>Hey there!</h1>
       <div className="home-container">
+        <h1 className="home-heading">Hey there!</h1>
         <p className="home-p">
           Hello and welcome to the Cozy Community Collective! This is a place to share some of your 
           favorite books, movies, and podcasts. What are some feel-good movies that boost your mood? 
