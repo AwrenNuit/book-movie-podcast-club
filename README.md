@@ -16,9 +16,10 @@ View the app here: https://book-and-movie-club.web.app/
 
 ## Future Plans (ongoing)
 
+- Implement upvote / downvote system
 - Create a discussion room
 - Expand main features to include chore / cleaning / cooking inspiration and tips
-- Add ability to sort tables by genre or author
+- Add ability to sort tables by column
 - Refine visual aesthetics
 
 With questions, suggestions, or concerns email me at awren.nuit@gmail.com
