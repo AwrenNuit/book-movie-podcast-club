@@ -4,6 +4,14 @@
   line-height: 1em;
 }
 
+h1, h2, h3, th, .nav-name {
+  font-family: 'Times New Roman', serif;
+}
+
+a, p, span, div, td {
+  font-family: 'Sen', sans-serif;
+}
+
 a {
   color: black;
 }
