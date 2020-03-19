@@ -79,7 +79,7 @@ export default function Books() {
                   className="add-new-item-input"
                   type="radio" 
                   name="free"
-                  value="true" 
+                  value="Yes" 
                   onChange={(e)=>setNewFree(e.target.value)} 
                 />
                 Yes
@@ -89,7 +89,7 @@ export default function Books() {
                   className="add-new-item-input"
                   type="radio" 
                   name="free"
-                  value="false" 
+                  value="No" 
                   onChange={(e)=>setNewFree(e.target.value)} 
                   defaultChecked
                 />
