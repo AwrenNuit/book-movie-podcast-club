@@ -51,59 +51,75 @@ export default function Movies() {
         <div className="form-container">
           <h3>Add Movie: </h3>
           <form className="add-new-item-form" onSubmit={addNewMovie}>
-            <div>
-              <label>Title:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newTitle} 
-                onChange={(e)=>setNewTitle(e.target.value)} 
-                placeholder="movie title" 
-              />
-            </div>
-            <div>
-              <label>Genre:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newGenre} 
-                onChange={(e)=>setNewGenre(e.target.value)} 
-                placeholder="movie genre" 
-              />
-            </div>
-            <div>
-              <label>Available for free?</label>
-              <label>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Title:</label>
+              </div>
+              <div className="flex-col">
                 <input 
                   className="add-new-item-input"
-                  type="radio" 
-                  name="free"
-                  value="Yes" 
-                  onChange={(e)=>setNewFree(e.target.value)} 
+                  type="text" 
+                  value={newTitle} 
+                  onChange={(e)=>setNewTitle(e.target.value)} 
+                  placeholder="movie title" 
                 />
-                Yes
-              </label>
-              <label>
+              </div>
+            </div>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Genre:</label>
+              </div>
+              <div className="flex-col">
                 <input 
                   className="add-new-item-input"
-                  type="radio" 
-                  name="free"
-                  value="No" 
-                  onChange={(e)=>setNewFree(e.target.value)} 
-                  defaultChecked
+                  type="text" 
+                  value={newGenre} 
+                  onChange={(e)=>setNewGenre(e.target.value)} 
+                  placeholder="movie genre" 
                 />
-                No
-              </label>
+              </div>
             </div>
-            <div>
-            <label>Where to find this movie online:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newLocation} 
-                onChange={(e)=>setNewLocation(e.target.value)} 
-                placeholder="website link" 
-              />
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Available for free?</label>
+              </div>
+              <div className="flex-col">
+                <label>
+                  <input 
+                    className="add-new-item-input"
+                    type="radio" 
+                    name="free"
+                    value="Yes" 
+                    onChange={(e)=>setNewFree(e.target.value)} 
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input 
+                    className="add-new-item-input"
+                    type="radio" 
+                    name="free"
+                    value="No" 
+                    onChange={(e)=>setNewFree(e.target.value)} 
+                    defaultChecked
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Where to find this movie:</label>
+              </div>
+              <div className="flex-col">
+                <input 
+                  className="add-new-item-input"
+                  type="text" 
+                  value={newLocation} 
+                  onChange={(e)=>setNewLocation(e.target.value)} 
+                  placeholder="website, link, etc" 
+                />
+              </div>
             </div>
             <button type="submit">Add to list!</button>
           </form>

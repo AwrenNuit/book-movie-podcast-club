@@ -48,8 +48,23 @@ th {
   margin: 10px;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col {
+  width: 205px;
+  padding-bottom: 5px;
+}
+
+.flex-col:nth-child(odd) {
+  border-bottom: 1px solid rgb(160, 114, 87);
+}
+
 .form-container {
-  max-width: 405px;
+  max-width: 415px;
   text-align: left;
   margin: 10px auto;
 }

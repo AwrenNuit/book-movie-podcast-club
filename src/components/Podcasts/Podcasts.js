@@ -51,59 +51,75 @@ export default function Podcasts() {
         <div className="form-container">
           <h3>Add Podcast: </h3>
           <form className="add-new-item-form" onSubmit={addNewPodcast}>
-            <div>
-              <label>Title:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newTitle} 
-                onChange={(e)=>setNewTitle(e.target.value)} 
-                placeholder="podcast name" 
-              />
-            </div>
-            <div>
-              <label>Description:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newDescription} 
-                onChange={(e)=>setNewDescription(e.target.value)} 
-                placeholder="brief description" 
-              />
-            </div>
-            <div>
-              <label>Available for free?</label>
-              <label>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Title:</label>
+              </div>
+              <div className="flex-col">
                 <input 
                   className="add-new-item-input"
-                  type="radio" 
-                  name="free"
-                  value="Yes" 
-                  onChange={(e)=>setNewFree(e.target.value)} 
+                  type="text" 
+                  value={newTitle} 
+                  onChange={(e)=>setNewTitle(e.target.value)} 
+                  placeholder="podcast name" 
                 />
-                Yes
-              </label>
-              <label>
+              </div>
+            </div>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Description:</label>
+              </div>
+              <div className="flex-col">
                 <input 
                   className="add-new-item-input"
-                  type="radio" 
-                  name="free"
-                  value="No" 
-                  onChange={(e)=>setNewFree(e.target.value)} 
-                  defaultChecked
+                  type="text" 
+                  value={newDescription} 
+                  onChange={(e)=>setNewDescription(e.target.value)} 
+                  placeholder="brief description" 
                 />
-                No
-              </label>
+              </div>
             </div>
-            <div>
-            <label>Where to find this podcast:</label>
-              <input 
-                className="add-new-item-input"
-                type="text" 
-                value={newLocation} 
-                onChange={(e)=>setNewLocation(e.target.value)} 
-                placeholder="website link" 
-              />
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Available for free?</label>
+              </div>
+              <div className="flex-col">
+                <label>
+                  <input 
+                    className="add-new-item-input"
+                    type="radio" 
+                    name="free"
+                    value="Yes" 
+                    onChange={(e)=>setNewFree(e.target.value)} 
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input 
+                    className="add-new-item-input"
+                    type="radio" 
+                    name="free"
+                    value="No" 
+                    onChange={(e)=>setNewFree(e.target.value)} 
+                    defaultChecked
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+            <div className="flex-row">
+              <div className="flex-col">
+                <label>Where to find this podcast:</label>
+              </div>
+              <div className="flex-col">
+                <input 
+                  className="add-new-item-input"
+                  type="text" 
+                  value={newLocation} 
+                  onChange={(e)=>setNewLocation(e.target.value)} 
+                  placeholder="website, link, etc" 
+                />
+              </div>
             </div>
             <button type="submit">Add to list!</button>
           </form>
