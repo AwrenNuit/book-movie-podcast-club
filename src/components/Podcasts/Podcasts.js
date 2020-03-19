@@ -111,7 +111,7 @@ export default function Podcasts() {
       </div>
       <table className="podcast-table">
         <thead>
-          <tr>
+          <tr className="podcast-table-header">
             <th>Title</th>
             <th>Description</th>
             <th>Free?</th>
@@ -120,7 +120,7 @@ export default function Podcasts() {
         </thead>
         <tbody>
           {podcastList.map((podcast, i)=>
-            <tr key={i}>
+            <tr className="podcast-table-row" key={i}>
               <td>{podcast.title || "-"}</td>
               <td>{podcast.description || "-"}</td>
               <td>{podcast.free || "-"}</td>

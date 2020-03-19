@@ -111,7 +111,7 @@ export default function Movies() {
       </div>
       <table className="movie-table">
         <thead>
-          <tr>
+          <tr className="movie-table-header">
             <th>Title</th>
             <th>Genre</th>
             <th>Free?</th>
@@ -120,7 +120,7 @@ export default function Movies() {
         </thead>
         <tbody>
           {movieList.map((movie, i)=>
-            <tr key={i}>
+            <tr className="movie-table-row" key={i}>
               <td>{movie.title || "-"}</td>
               <td>{movie.genre || "-"}</td>
               <td>{movie.free || "-"}</td>

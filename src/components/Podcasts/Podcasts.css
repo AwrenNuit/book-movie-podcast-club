@@ -1,3 +1,12 @@
 .podcast-table {
   background-color: #fcd1ae;
 }
+
+.podcast-table-header {
+  font-size: 1.2em;
+  border-bottom: 3px solid black;
+}
+
+.podcast-table-row:nth-child(odd) {
+  background-color: #e6be9f;
+}

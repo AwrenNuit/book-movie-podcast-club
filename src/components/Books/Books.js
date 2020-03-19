@@ -112,16 +112,16 @@ export default function Books() {
       </div>
       <table className="book-table">
         <thead>
-          <tr>
-            <th className="book-table-heading">Title</th>
-            <th className="book-table-heading">Author</th>
-            <th className="book-table-heading">Free?</th>
-            <th className="book-table-heading">Find it Here</th>
+          <tr className="book-table-header">
+            <th>Title</th>
+            <th>Author</th>
+            <th>Free?</th>
+            <th>Find it Here</th>
           </tr>
         </thead>
         <tbody>
           {bookList.map((book, i)=>
-            <tr key={i}>
+            <tr className="book-table-row" key={i}>
               <td>{book.title}</td>
               <td>{book.author || "-"}</td>
               <td>{book.free || "-"}</td>
