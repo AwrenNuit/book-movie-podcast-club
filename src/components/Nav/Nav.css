@@ -1,3 +1,7 @@
+nav, nav ul, nav ul li {
+  z-index: 1;
+}
+
 nav ul {
   position: fixed;
   top: 0;

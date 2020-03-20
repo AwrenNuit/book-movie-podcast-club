@@ -4,6 +4,7 @@
   right: 50%;
   display: inline-block;
   max-width: 600px;
+  min-width: 350px;
   text-align: left;
   margin-top: 20px;
   background-color: pink;
@@ -22,4 +23,10 @@
 .home-p {
   margin: 10px;
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-container {
+    margin-top: 80px;
+  }
 }

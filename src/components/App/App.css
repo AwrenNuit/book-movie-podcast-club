@@ -165,4 +165,8 @@ th {
   table td span {
       display: block;
   }
+
+  .home-container {
+    padding-top: 200px;
+  }
 }
