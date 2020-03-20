@@ -30,10 +30,22 @@ table {
   box-shadow: 5px 5px 10px grey;
 }
 
+table td span {
+  display: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 th, td {
   border: 1px solid black;
   padding: 5px;
   min-width: 150px;
+  max-width: 500px;
 }
 
 th {
@@ -60,7 +72,7 @@ th {
 }
 
 .flex-col:nth-child(odd) {
-  border-bottom: 1px solid rgb(160, 114, 87);
+  border-bottom: 1px solid #a07257;
 }
 
 .form-container {
@@ -119,5 +131,38 @@ th {
   }
   100%{
     background-position: 0% 50%
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  table {
+    margin: 0 30px;
+  }
+
+  table thead {
+    left: -9999px;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  table tr {
+      border-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+  }
+
+  table td {
+      border: 1px solid;
+      margin: 0 -1px -1px 0;
+      padding-top: 35px;
+      position: relative;
+      width: 100%;
+  }
+
+  table td span {
+      display: block;
   }
 }

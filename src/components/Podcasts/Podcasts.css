@@ -10,3 +10,16 @@
 .podcast-table-row:nth-child(odd) {
   background-color: #e6be9f;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .podcast-table {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .podcast-table-row, .podcast-table-row:nth-child(odd) {
+    background-color: #fcd1ae;
+    max-width: 400px;
+  }
+}

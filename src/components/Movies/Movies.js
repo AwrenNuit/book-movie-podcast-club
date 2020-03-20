@@ -137,10 +137,11 @@ export default function Movies() {
         <tbody>
           {movieList.map((movie, i)=>
             <tr className="movie-table-row" key={i}>
-              <td>{movie.title || "-"}</td>
-              <td>{movie.genre || "-"}</td>
-              <td>{movie.free || "-"}</td>
+              <td><span>Title</span>{movie.title || "-"}</td>
+              <td><span>Genre</span>{movie.genre || "-"}</td>
+              <td><span>Free?</span>{movie.free || "-"}</td>
               <td>
+                <span>Find it Here</span>
                 {movie.location ? 
                   <a href={movie.location} target="_blank" rel="noopener noreferrer">{movie.location}</a> 
                 : 

@@ -10,3 +10,16 @@
 .book-table-row:nth-child(odd) {
   background-color: #95abe8;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .book-table {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .book-table-row, .book-table-row:nth-child(odd) {
+    background-color: #b5c8fd;
+    max-width: 400px;
+  }
+}

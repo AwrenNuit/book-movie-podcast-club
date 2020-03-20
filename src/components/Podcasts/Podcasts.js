@@ -137,10 +137,11 @@ export default function Podcasts() {
         <tbody>
           {podcastList.map((podcast, i)=>
             <tr className="podcast-table-row" key={i}>
-              <td>{podcast.title || "-"}</td>
-              <td>{podcast.description || "-"}</td>
-              <td>{podcast.free || "-"}</td>
+              <td><span>Title</span>{podcast.title || "-"}</td>
+              <td><span>Description</span>{podcast.description || "-"}</td>
+              <td><span>Free?</span>{podcast.free || "-"}</td>
               <td>
+                <span>Find it Here</span>
                 {podcast.location ? 
                   <a href={podcast.location} target="_blank" rel="noopener noreferrer">{podcast.location}</a> 
                 : 

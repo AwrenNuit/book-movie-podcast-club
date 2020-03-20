@@ -138,10 +138,11 @@ export default function Books() {
         <tbody>
           {bookList.map((book, i)=>
             <tr className="book-table-row" key={i}>
-              <td>{book.title}</td>
-              <td>{book.author || "-"}</td>
-              <td>{book.free || "-"}</td>
+              <td><span>Title</span>{book.title}</td>
+              <td><span>Author</span>{book.author || "-"}</td>
+              <td><span>Free?</span>{book.free || "-"}</td>
               <td>
+                <span>Find it Here</span>
                 {book.location ? 
                   <a href={book.location} target="_blank" rel="noopener noreferrer">{book.location}</a> 
                 : 

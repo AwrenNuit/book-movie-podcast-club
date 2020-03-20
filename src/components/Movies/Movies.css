@@ -10,3 +10,16 @@
 .movie-table-row:nth-child(odd) {
   background-color: #e49db6;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .movie-table {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .movie-table-row, .movie-table-row:nth-child(odd) {
+    background-color: #FCAEC9;
+    max-width: 400px;
+  }
+}
